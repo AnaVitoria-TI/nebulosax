@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#080d22">
-  <title>Arquivo Cósmico — Toda missão deixa uma história</title>
+  <title>Cosmic Archive — Every mission leaves a story</title>
 
   <link rel="stylesheet" href="style.css">
 
@@ -13,12 +13,12 @@
 
 <body>
   <div class="stars"></div>
-  <header><button class="brand" onclick="goHome()">✦ ARQUIVO <span>CÓSMICO</span></button>
-    <nav class="nav"><button onclick="openDiary()">▤ DIÁRIO</button></nav>
+  <header><button class="brand" onclick="goHome()">✦ COSMIC <span>ARCHIVE</span></button>
+    <nav class="nav"><button onclick="openDiary()">▤ DIARY</button></nav>
   </header>
   <div class="progress-shell" id="progressShell" hidden>
     <div class="wrap">
-      <div class="progress-top"><span>JORNADA DE DESCOBERTAS</span><span id="progressText">0% · 0 de 12 etapas</span>
+      <div class="progress-top"><span>JOURNEY OF DISCOVERY</span><span id="progressText">0% · 0 of 12 steps</span>
       </div>
       <div class="track">
         <div class="fill" id="progressFill"></div><span class="ship-marker" id="shipMarker">🚀</span>
@@ -31,16 +31,16 @@
         <div class="guide-row" id="g-home"></div>
         <div class="hero">
           <div>
-            <div class="eyebrow">Uma aventura pela história da exploração espacial</div>
-            <h1>ARQUIVO<br><span>CÓSMICO</span></h1>
-            <div class="slogan">TODA MISSÃO DEIXA UMA HISTÓRIA.</div>
-            <p class="lead">Existem histórias incríveis espalhadas pelo espaço. Toque na Terra e comece a descobrir os
-              equipamentos e as missões que ajudaram a humanidade a conhecer outros mundos.</p>
+            <div class="eyebrow">An adventure through the history of space exploration</div>
+            <h1>COSMIC<br><span>ARCHIVE</span></h1>
+            <div class="slogan">EVERY MISSION LEAVES A STORY.</div>
+            <p class="lead">There are incredible stories scattered across space. Tap on Earth and start discovering the
+              equipment and missions that helped humanity get to know other worlds.</p>
           </div>
           <div class="earth-stage">
-            <div class="orbit"></div><button class="earth" aria-label="Começar aventura clicando na Terra"
+            <div class="orbit"></div><button class="earth" aria-label="Start adventure by clicking on Earth"
               onclick="startJourney()"></button>
-            <div class="earth-hint">↓ TOQUE NA TERRA PARA COMEÇAR</div>
+            <div class="earth-hint">↓ TAP ON EARTH TO START</div>
           </div>
         </div>
       </div>
@@ -49,17 +49,17 @@
       <div class="wrap">
         <div class="guide-row" id="g-destinations"></div>
         <div class="section-head">
-          <div class="eyebrow">Primeira etapa</div>
-          <h2>Escolha seu destino</h2>
-          <p>Dois lugares diferentes guardam histórias de máquinas que ajudaram a humanidade a explorar o espaço. Qual
-            você quer conhecer primeiro?</p>
+          <div class="eyebrow">First step</div>
+          <h2>Choose your destination</h2>
+          <p>Two different places hold stories of machines that helped humanity explore space. Which
+            one do you want to explore first?</p>
         </div>
         <div class="destinations"><button class="destination" onclick="travel('moon')">
-            <div class="planet moon"></div><strong>Lua</strong><small>Satélite natural da Terra · 2 descobertas</small>
-            <div class="tag">TOQUE PARA EXPLORAR</div>
+            <div class="planet moon"></div><strong>Moon</strong><small>Earth's natural satellite · 2 discoveries</small>
+            <div class="tag">TAP TO EXPLORE</div>
           </button><button class="destination" onclick="travel('mars')">
-            <div class="planet mars"></div><strong>Marte</strong><small>Planeta rochoso · 2 descobertas</small>
-            <div class="tag">TOQUE PARA EXPLORAR</div>
+            <div class="planet mars"></div><strong>Mars</strong><small>Rocky planet · 2 discoveries</small>
+            <div class="tag">TAP TO EXPLORE</div>
           </button></div>
       </div>
     </section>
@@ -67,89 +67,89 @@
       <div class="wrap">
         <div class="guide-row" id="g-moon"></div>
         <div class="section-head">
-          <div class="eyebrow">Destino selecionado</div>
-          <h2>Explorando a Lua</h2>
-          <p>A Lua é o satélite natural da Terra. Sua superfície guarda marcas de impactos e histórias de missões que
-            ajudaram a preparar a exploração humana.</p>
+          <div class="eyebrow">Selected destination</div>
+          <h2>Exploring the Moon</h2>
+          <p>The Moon is Earth's natural satellite. Its surface holds impact scars and stories of missions that
+            helped prepare for human exploration.</p>
         </div>
         <div class="mission-scene moon-scene">
           <div class="big-planet"></div>
           <div class="terrain"></div>
           <div class="scene-copy">
-            <div class="eyebrow">Diário de bordo · Lua</div>
-            <h2>Uma paisagem cheia de histórias</h2>
-            <p>Observe as crateras e conheça dois equipamentos históricos que deixaram sua marca neste destino.</p>
+            <div class="eyebrow">Logbook · Moon</div>
+            <h2>A landscape full of stories</h2>
+            <p>Observe the craters and discover two historic pieces of equipment that left their mark on this destination.</p>
           </div>
         </div>
         <div class="equip-grid" id="moonEquip"></div>
-        <div class="actions"><button class="secondary" onclick="showScreen('destinations')">← Escolher outro
-            destino</button><button class="secondary" onclick="openDiary()">Abrir Diário</button></div>
+        <div class="actions"><button class="secondary" onclick="showScreen('destinations')">← Choose another
+            destination</button><button class="secondary" onclick="openDiary()">Open Diary</button></div>
       </div>
     </section>
     <section class="screen" id="mars">
       <div class="wrap">
         <div class="guide-row" id="g-mars"></div>
         <div class="section-head">
-          <div class="eyebrow">Destino selecionado</div>
-          <h2>Explorando Marte</h2>
-          <p>Marte é um planeta rochoso conhecido por suas paisagens avermelhadas. Rovers e aeronaves experimentais
-            ajudaram a revelar mais sobre esse mundo.</p>
+          <div class="eyebrow">Selected destination</div>
+          <h2>Exploring Mars</h2>
+          <p>Mars is a rocky planet known for its reddish landscapes. Rovers and experimental aircraft
+            helped reveal more about this world.</p>
         </div>
         <div class="mission-scene mars-scene">
           <div class="big-planet"></div>
           <div class="terrain"></div>
           <div class="scene-copy">
-            <div class="eyebrow">Diário de bordo · Marte</div>
-            <h2>O planeta vermelho</h2>
-            <p>Explore as histórias de um rover e de um helicóptero experimental que fizeram descobertas importantes.
+            <div class="eyebrow">Logbook · Mars</div>
+            <h2>The red planet</h2>
+            <p>Explore the stories of a rover and an experimental helicopter that made important discoveries.
             </p>
           </div>
         </div>
         <div class="equip-grid" id="marsEquip"></div>
-        <div class="actions"><button class="secondary" onclick="showScreen('destinations')">← Escolher outro
-            destino</button><button class="secondary" onclick="openDiary()">Abrir Diário</button></div>
+        <div class="actions"><button class="secondary" onclick="showScreen('destinations')">← Choose another
+            destination</button><button class="secondary" onclick="openDiary()">Open Diary</button></div>
       </div>
     </section>
     <section class="screen" id="destinationDone">
       <div class="wrap section-head">
         <div class="guide-row" id="g-done"></div>
         <div class="final-medal">🏅</div>
-        <div class="eyebrow">Etapa concluída</div>
-        <h2>Destino explorado!</h2>
-        <p>Parabéns! Você explorou todos os objetos deste destino! Suas descobertas já estão guardadas no Diário de
-          Viagem!</p>
+        <div class="eyebrow">Step completed</div>
+        <h2>Destination explored!</h2>
+        <p>Congratulations! You have explored all objects in this destination! Your discoveries are now saved in your
+          Travel Diary!</p>
         <div class="actions" style="justify-content:center"><button class="primary"
-            onclick="otherDestination()">EXPLORAR O OUTRO DESTINO</button><button class="secondary"
-            onclick="finishAdventure()">ENCERRAR A AVENTURA</button><button class="secondary"
-            onclick="openDiary()">ABRIR DIÁRIO DE VIAGEM</button></div>
+            onclick="otherDestination()">EXPLORE THE OTHER DESTINATION</button><button class="secondary"
+            onclick="finishAdventure()">END ADVENTURE</button><button class="secondary"
+            onclick="openDiary()">OPEN TRAVEL DIARY</button></div>
       </div>
     </section>
     <section class="screen" id="final">
       <div class="wrap section-head">
         <div class="final-medal">🏆</div>
-        <div class="eyebrow">Todas as etapas concluídas</div>
-        <h2>MISSÃO CUMPRIDA</h2>
+        <div class="eyebrow">All steps completed</div>
+        <h2>MISSION ACCOMPLISHED</h2>
         <div class="guide-row" id="g-final"></div>
         <div class="stat-row">
-          <div class="stat"><strong id="finalDiscoveries">4</strong><small>Descobertas</small></div>
-          <div class="stat"><strong id="finalAnswers">0/8</strong><small>Questões corretas</small></div>
-          <div class="stat"><strong id="finalPercent">100%</strong><small>Jornada</small></div>
+          <div class="stat"><strong id="finalDiscoveries">4</strong><small>Discoveries</small></div>
+          <div class="stat"><strong id="finalAnswers">0/8</strong><small>Correct answers</small></div>
+          <div class="stat"><strong id="finalPercent">100%</strong><small>Journey</small></div>
         </div>
-        <div class="actions" style="justify-content:center"><button class="primary" onclick="openDiary()">ABRIR DIÁRIO
-            DE VIAGEM</button><button class="secondary" onclick="goHome()">VOLTAR AO INÍCIO</button></div>
+        <div class="actions" style="justify-content:center"><button class="primary" onclick="openDiary()">OPEN TRAVEL
+            DIARY</button><button class="secondary" onclick="goHome()">BACK TO HOME</button></div>
       </div>
     </section>
   </main>
-  <footer>ARQUIVO CÓSMICO · TODA MISSÃO DEIXA UMA HISTÓRIA.<br>Histórias e imagens baseadas em materiais da NASA.
+  <footer>COSMIC ARCHIVE · EVERY MISSION LEAVES A STORY.<br>Stories and images based on NASA materials.
   </footer>
   <div class="modal-backdrop" id="storyModal" role="dialog" aria-modal="true" aria-labelledby="storyTitle">
     <div class="modal story">
       <div class="story-head">
         <div class="modal-top">
           <div>
-            <div class="tag" id="storyTag">DESCOBERTA</div>
-            <h2 id="storyTitle">História</h2>
-          </div><button class="close" onclick="closeStory()" aria-label="Fechar">×</button>
+            <div class="tag" id="storyTag">DISCOVERY</div>
+            <h2 id="storyTitle">Story</h2>
+          </div><button class="close" onclick="closeStory()" aria-label="Close">×</button>
         </div>
         <div class="story-progress">
           <div id="storyFill" style="width:25%"></div>
@@ -171,16 +171,16 @@
         </div>
       </div>
       <div class="modal-actions"><button class="secondary" id="prevScene" onclick="changeScene(-1)">←
-          VOLTAR</button><button class="primary" id="nextScene" onclick="changeScene(1)">PRÓXIMA CENA →</button></div>
+          BACK</button><button class="primary" id="nextScene" onclick="changeScene(1)">NEXT SCENE →</button></div>
     </div>
   </div>
   <div class="modal-backdrop" id="quizModal" role="dialog" aria-modal="true" aria-labelledby="quizTitle">
     <div class="modal">
       <div class="modal-top">
         <div>
-          <div class="tag">DESAFIO DO EXPLORADOR</div>
-          <h2 id="quizTitle">Vamos ver o que você descobriu?</h2>
-        </div><button class="close" onclick="closeQuiz()" aria-label="Fechar">×</button>
+          <div class="tag">EXPLORER'S CHALLENGE</div>
+          <h2 id="quizTitle">Let's see what you discovered?</h2>
+        </div><button class="close" onclick="closeQuiz()" aria-label="Close">×</button>
       </div>
       <div id="quizContent"></div>
     </div>
@@ -189,29 +189,29 @@
     <div class="modal">
       <div class="modal-top">
         <div>
-          <div class="tag">SEU REGISTRO DE DESCOBERTAS</div>
-          <h2 id="diaryTitle">Diário de Viagem</h2>
-        </div><button class="close" onclick="closeDiary()" aria-label="Fechar">×</button>
+          <div class="tag">YOUR DISCOVERY LOG</div>
+          <h2 id="diaryTitle">Travel Diary</h2>
+        </div><button class="close" onclick="closeDiary()" aria-label="Close">×</button>
       </div>
       <div class="guide-row compact" id="g-diary"></div>
       <div class="stat-row">
-        <div class="stat"><strong id="diaryPct">0%</strong><small>Progresso geral</small></div>
-        <div class="stat"><strong id="diaryCount">0/4</strong><small>Equipamentos descobertos</small></div>
-        <div class="stat"><strong id="diaryMedals">0</strong><small>Medalhas</small></div>
+        <div class="stat"><strong id="diaryPct">0%</strong><small>Overall progress</small></div>
+        <div class="stat"><strong id="diaryCount">0/4</strong><small>Equipment discovered</small></div>
+        <div class="stat"><strong id="diaryMedals">0</strong><small>Medals</small></div>
       </div>
       <div class="track">
         <div class="fill" id="diaryFill"></div>
       </div>
-      <div class="diary-tabs"><button class="selected" onclick="diaryTab('all',this)">Todas</button><button
-          onclick="diaryTab('moon',this)">Lua</button><button onclick="diaryTab('mars',this)">Marte</button></div>
+      <div class="diary-tabs"><button class="selected" onclick="diaryTab('all',this)">All</button><button
+          onclick="diaryTab('moon',this)">Moon</button><button onclick="diaryTab('mars',this)">Mars</button></div>
       <div id="diaryList"></div>
-      <div class="actions"><button class="secondary" onclick="closeDiary()">FECHAR DIÁRIO</button></div>
+      <div class="actions"><button class="secondary" onclick="closeDiary()">CLOSE DIARY</button></div>
     </div>
   </div>
   <div class="launch" id="launch">
     <div class="rocket">🚀</div>
-    <h2 id="launchText">Motores ligados!</h2>
-    <p class="muted">Prepare-se para a próxima etapa...</p>
+    <h2 id="launchText">Engines ignited!</h2>
+    <p class="muted">Prepare for the next step...</p>
     <div class="guide-row compact" id="g-launch"></div>
   </div>
   <div class="toast" id="toast" role="status"></div>
