@@ -1,0 +1,15 @@
+# Arquivo Cósmico
+
+Site educativo interativo em português brasileiro.
+
+## Como abrir
+1. Extraia o arquivo ZIP.
+2. Abra `index.html` em um navegador atualizado (Chrome, Edge, Firefox ou Safari).
+
+Não precisa instalar dependências nem iniciar servidor. O progresso fica salvo no navegador por `localStorage`.
+
+## Observações
+- Esta é a primeira versão funcional, com navegação, histórias, questionários, áudio por síntese de voz do navegador e Diário de Viagem.
+- As representações dos equipamentos são provisórias (ícones/ilustrações simples), pois as quatro imagens de referência ainda não foram enviadas.
+- As falas usam a voz disponível no dispositivo. O navegador pode exigir uma interação do usuário antes de reproduzir áudio.
+- A fonte Nunito/Space Grotesk é carregada do Google Fonts; se estiver sem internet, o site usa fontes alternativas.
