@@ -1,153 +1,322 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#101a36">
-<title>Arquivo Cósmico — Toda missão deixa uma história</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101a36">
+  <title>Arquivo Cósmico — Toda missão deixa uma história</title>
 
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<div class="stars"></div>
-<header class="topbar">
-  <div class="brand"><span class="brand-mark">✦</span> ARQUIVO CÓSMICO</div>
-  <div class="top-actions">
-    <button class="icon-btn" id="diaryTop" aria-label="Abrir Diário de Viagem">📖 Diário</button>
-    <button class="icon-btn" id="soundToggle" aria-label="Ativar ou silenciar áudio">🔊 Som</button>
-    <button class="icon-btn" id="motionToggle" aria-label="Reduzir animações">◌ Movimento</button>
-  </div>
-</header>
-<main class="main">
-  <section class="screen active" id="home">
-    <div class="hero">
-      <div class="hero-copy">
-        <div class="eyebrow">Uma aventura de descobertas</div>
-        <h1> COSMIC<span> FILE</span></h1>
-        <h3>EVERY MISSION LEAVES A STORY</h3>
-        <p class="lead">Prepare seu traje, explorador! Existem histórias incríveis espalhadas pelo espaço. Vamos descobrir os equipamentos e as missões que ajudaram a humanidade a conhecer outros mundos.</p>
-        <div class="guide"><div class="mini">👩🏻‍🚀</div><div class="bubble" id="homeSpeech">Olá, explorador! Está preparado para uma aventura pelo espaço? Vamos descobrir histórias incríveis que aconteceram fora da Terra!</div></div>
-        <div class="btn-row"><button class="btn primary" id="startBtn">INICIAR VIAGEM <span class="arrow">➜</span></button><button class="btn secondary" id="repeatHome">▶ Ouvir novamente</button></div>
+  <div class="stars"></div>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">✦</span> ARQUIVO CÓSMICO</div>
+    <div class="top-actions">
+      <button class="icon-btn" id="diaryTop" aria-label="Abrir Diário de Viagem">📖 Diário</button>
+      <button class="icon-btn" id="soundToggle" aria-label="Ativar ou silenciar áudio">🔊 Som</button>
+      <button class="icon-btn" id="motionToggle" aria-label="Reduzir animações">◌ Movimento</button>
+    </div>
+  </header>
+  <main class="main">
+    <section class="screen active" id="home">
+      <div class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow">Uma aventura de descobertas</div>
+          <h1> COSMIC<span> FILE</span></h1>
+          <h3>EVERY MISSION LEAVES A STORY</h3>
+          <p class="lead">Prepare seu traje, explorador! Existem histórias incríveis espalhadas pelo espaço. Vamos
+            descobrir os equipamentos e as missões que ajudaram a humanidade a conhecer outros mundos.</p>
+          <div class="guide">
+            <div class="mini">👩🏻‍🚀</div>
+            <div class="bubble" id="homeSpeech">Olá, explorador! Está preparado para uma aventura pelo espaço? Vamos
+              descobrir histórias incríveis que aconteceram fora da Terra!</div>
+          </div>
+          <div class="btn-row"><button class="btn primary" id="startBtn">INICIAR VIAGEM <span
+                class="arrow">➜</span></button><button class="btn secondary" id="repeatHome">▶ Ouvir novamente</button>
+          </div>
+        </div>
+        <div class="hero-art">
+          <div class="orbit"></div>
+          <div class="earth"></div>
+          <div class="moonlet"></div>
+          <div class="astronaut">
+            <div class="helmet">
+              <div class="visor"></div>
+            </div>
+            <div class="body-suit"></div>
+            <div class="arm left"></div>
+            <div class="arm right"></div>
+            <div class="boot one"></div>
+            <div class="boot two"></div>
+          </div>
+        </div>
       </div>
-      <div class="hero-art"><div class="orbit"></div><div class="earth"></div><div class="moonlet"></div><div class="astronaut"><div class="helmet"><div class="visor"></div></div><div class="body-suit"></div><div class="arm left"></div><div class="arm right"></div><div class="boot one"></div><div class="boot two"></div></div></div>
+    </section>
+
+    <section class="screen" id="launch">
+      <div class="launch">
+        <div>
+          <div class="rocket" aria-label="Nave espacial decolando">🚀</div>
+          <div class="eyebrow">Motores ligados</div>
+          <h2>Preparando a decolagem...</h2>
+          <p class="lead" style="margin:auto">A Terra está ficando para trás. Nossa próxima parada é o espaço!</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="destinations">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Escolha sua próxima parada</div>
+          <h2>Para onde vamos?</h2>
+          <p class="lead">Você escolhe a ordem. Podemos visitar os dois destinos!</p>
+        </div>
+        <div class="guide">
+          <div class="mini">👩🏻‍🚀</div>
+          <div class="bubble">A Lua e Marte guardam descobertas diferentes. Qual deles vamos explorar primeiro?</div>
+        </div>
+      </div>
+      <div class="destination-grid">
+        <button class="destination" data-planet="moon">
+          <div class="destination-content">
+            <div class="eyebrow">Destino 01</div>
+            <h2>LUA</h2>
+            <p>Um mundo de crateras, silêncio e missões que marcaram a história.</p><strong>VISITAR A LUA →</strong>
+          </div>
+          <div class="planet luna"></div>
+        </button>
+        <button class="destination" data-planet="mars">
+          <div class="destination-content">
+            <div class="eyebrow">Destino 02</div>
+            <h2>MARTE</h2>
+            <p>O planeta vermelho, onde robôs exploradores investigam o terreno.</p><strong>VISITAR MARTE →</strong>
+          </div>
+          <div class="planet mars"></div>
+        </button>
+      </div>
+    </section>
+
+    <section class="screen" id="planet">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow" id="planetEyebrow">Chegamos ao destino</div>
+          <h2 id="planetTitle">Lua</h2>
+          <p class="lead" id="planetIntro"></p>
+        </div><button class="btn secondary" id="backDest">← Trocar destino</button>
+      </div>
+      <div class="scene-panel">
+        <div class="landscape" id="landscape">
+          <div class="land-label" id="landLabel">SUPERFÍCIE LUNAR</div>
+          <div class="horizon"></div>
+          <div class="crater c1"></div>
+          <div class="crater c2"></div>
+          <div class="rover" id="sceneIcon">🌑</div>
+        </div>
+        <div class="land-info">
+          <div class="guide">
+            <div class="mini">👩🏻‍🚀</div>
+            <div class="bubble" id="planetSpeech"></div>
+          </div>
+          <h3>O que vamos investigar?</h3>
+          <p class="small">Selecione um equipamento no cenário para começar a descoberta.</p>
+          <div class="object-grid" id="objectGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="story">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow" id="storyPlanet">Arquivo de descoberta</div>
+          <h2 id="storyTitle"></h2>
+        </div><button class="btn secondary" id="closeStory">✕ Fechar história</button>
+      </div>
+      <div class="progress-line"><span id="storyProgress" style="width:0%"></span></div>
+      <div class="story-layout">
+        <div class="story-visual">
+          <div class="big-object" id="storyIcon">🛰️</div>
+        </div>
+        <div class="story-copy">
+          <div class="eyebrow" id="storyCount"></div>
+          <h3 id="chapterTitle"></h3>
+          <p id="chapterText"></p>
+          <div class="guide" style="margin:12px 0">
+            <div class="mini">👩🏻‍🚀</div>
+            <div class="bubble" id="storySpeech"></div>
+          </div>
+          <div class="story-footer"><button class="btn secondary" id="prevChapter">← Voltar</button><button
+              class="btn primary" id="nextChapter">Próxima cena →</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="quiz">
+      <div class="eyebrow" style="text-align:center">Hora de lembrar</div>
+      <h2 style="text-align:center" id="quizTitle">Vamos testar uma descoberta?</h2>
+      <div class="quiz-card">
+        <div class="small" id="quizCount"></div>
+        <h3 id="question"></h3>
+        <div class="answers" id="answers"></div>
+        <div id="quizFeedback"></div>
+        <div class="btn-row" style="justify-content:flex-end"><button class="btn primary" id="quizNext"
+            disabled>Continuar →</button></div>
+      </div>
+    </section>
+
+    <section class="screen" id="planetDone">
+      <div class="hero" style="min-height:70vh">
+        <div>
+          <div class="eyebrow">Destino concluído</div>
+          <h2>Missão cumprida!</h2>
+          <p class="lead" id="doneText">Você explorou os objetos deste destino. Suas descobertas estão guardadas!</p>
+          <div class="guide">
+            <div class="mini">👩🏻‍🚀</div>
+            <div class="bubble">Parabéns, explorador! Cada descoberta ajuda a montar nossa história da exploração
+              espacial.</div>
+          </div>
+          <div class="btn-row"><button class="btn primary" id="otherPlanet">EXPLORAR O OUTRO PLANETA</button><button
+              class="btn secondary" id="finishAdventure">ENCERRAR A AVENTURA</button><button class="btn secondary"
+              id="openDiaryDone">📖 ABRIR DIÁRIO</button></div>
+        </div>
+        <div class="hero-art">
+          <div class="planet-arrival">🏅</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="final">
+      <div class="hero" style="min-height:70vh">
+        <div>
+          <div class="eyebrow">Fim da jornada — começo da curiosidade</div>
+          <h2>Você faz parte dessa história!</h2>
+          <p class="lead">Você conheceu missões, equipamentos e ideias que levaram a humanidade para além da Terra.
+            Continue fazendo perguntas: toda grande descoberta começa com curiosidade.</p>
+          <div class="stats" id="finalStats"></div>
+          <div class="btn-row"><button class="btn primary" id="finalDiary">VER MEU DIÁRIO</button><button
+              class="btn secondary" id="restart">RECOMEÇAR A VIAGEM</button></div>
+        </div>
+        <div class="hero-art">
+          <div class="earth"></div>
+          <div class="planet-arrival">👩🏻‍🚀</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-backdrop" id="diaryModal" role="dialog" aria-modal="true" aria-labelledby="diaryHeading">
+    <div class="modal">
+      <div class="modal-head">
+        <div>
+          <div class="eyebrow">Suas descobertas ficam guardadas</div>
+          <h2 id="diaryHeading">Diário de Viagem</h2>
+        </div><button class="close" id="closeDiary" aria-label="Fechar diário">✕</button>
+      </div>
+      <p>Este é o registro da sua expedição. Você pode voltar aqui sempre que quiser.</p>
+      <div class="stats">
+        <div class="stat"><strong id="discoveredCount">0/4</strong>Objetos descobertos</div>
+        <div class="stat"><strong id="completedCount">0</strong>Histórias concluídas</div>
+        <div class="stat"><strong id="correctCount">0</strong>Respostas certas</div>
+      </div>
+      <div class="meter"><span id="diaryMeter"></span></div>
+      <p class="small" id="diaryPercent">0% da exploração concluída</p>
+      <div class="diary-grid">
+        <div class="diary-section">
+          <h3>🌙 LUA</h3>
+          <div id="moonDiary"></div>
+          <div id="moonMedal" class="small"></div>
+        </div>
+        <div class="diary-section">
+          <h3>🔴 MARTE</h3>
+          <div id="marsDiary"></div>
+          <div id="marsMedal" class="small"></div>
+        </div>
+      </div>
+      <div class="btn-row" style="justify-content:flex-end"><button class="btn primary" id="closeDiaryBottom">FECHAR
+          DIÁRIO</button></div>
     </div>
-  </section>
-
-  <section class="screen" id="launch">
-    <div class="launch"><div><div class="rocket" aria-label="Nave espacial decolando">🚀</div><div class="eyebrow">Motores ligados</div><h2>Preparando a decolagem...</h2><p class="lead" style="margin:auto">A Terra está ficando para trás. Nossa próxima parada é o espaço!</p></div></div>
-  </section>
-
-  <section class="screen" id="destinations">
-    <div class="section-head"><div><div class="eyebrow">Escolha sua próxima parada</div><h2>Para onde vamos?</h2><p class="lead">Você escolhe a ordem. Podemos visitar os dois destinos!</p></div><div class="guide"><div class="mini">👩🏻‍🚀</div><div class="bubble">A Lua e Marte guardam descobertas diferentes. Qual deles vamos explorar primeiro?</div></div></div>
-    <div class="destination-grid">
-      <button class="destination" data-planet="moon"><div class="destination-content"><div class="eyebrow">Destino 01</div><h2>LUA</h2><p>Um mundo de crateras, silêncio e missões que marcaram a história.</p><strong>VISITAR A LUA →</strong></div><div class="planet luna"></div></button>
-      <button class="destination" data-planet="mars"><div class="destination-content"><div class="eyebrow">Destino 02</div><h2>MARTE</h2><p>O planeta vermelho, onde robôs exploradores investigam o terreno.</p><strong>VISITAR MARTE →</strong></div><div class="planet mars"></div></button>
-    </div>
-  </section>
-
-  <section class="screen" id="planet">
-    <div class="section-head"><div><div class="eyebrow" id="planetEyebrow">Chegamos ao destino</div><h2 id="planetTitle">Lua</h2><p class="lead" id="planetIntro"></p></div><button class="btn secondary" id="backDest">← Trocar destino</button></div>
-    <div class="scene-panel">
-      <div class="landscape" id="landscape"><div class="land-label" id="landLabel">SUPERFÍCIE LUNAR</div><div class="horizon"></div><div class="crater c1"></div><div class="crater c2"></div><div class="rover" id="sceneIcon">🌑</div></div>
-      <div class="land-info"><div class="guide"><div class="mini">👩🏻‍🚀</div><div class="bubble" id="planetSpeech"></div></div><h3>O que vamos investigar?</h3><p class="small">Selecione um equipamento no cenário para começar a descoberta.</p><div class="object-grid" id="objectGrid"></div></div>
-    </div>
-  </section>
-
-  <section class="screen" id="story">
-    <div class="section-head"><div><div class="eyebrow" id="storyPlanet">Arquivo de descoberta</div><h2 id="storyTitle"></h2></div><button class="btn secondary" id="closeStory">✕ Fechar história</button></div>
-    <div class="progress-line"><span id="storyProgress" style="width:0%"></span></div>
-    <div class="story-layout"><div class="story-visual"><div class="big-object" id="storyIcon">🛰️</div></div><div class="story-copy"><div class="eyebrow" id="storyCount"></div><h3 id="chapterTitle"></h3><p id="chapterText"></p><div class="guide" style="margin:12px 0"><div class="mini">👩🏻‍🚀</div><div class="bubble" id="storySpeech"></div></div><div class="story-footer"><button class="btn secondary" id="prevChapter">← Voltar</button><button class="btn primary" id="nextChapter">Próxima cena →</button></div></div></div>
-  </section>
-
-  <section class="screen" id="quiz">
-    <div class="eyebrow" style="text-align:center">Hora de lembrar</div><h2 style="text-align:center" id="quizTitle">Vamos testar uma descoberta?</h2>
-    <div class="quiz-card"><div class="small" id="quizCount"></div><h3 id="question"></h3><div class="answers" id="answers"></div><div id="quizFeedback"></div><div class="btn-row" style="justify-content:flex-end"><button class="btn primary" id="quizNext" disabled>Continuar →</button></div></div>
-  </section>
-
-  <section class="screen" id="planetDone">
-    <div class="hero" style="min-height:70vh"><div><div class="eyebrow">Destino concluído</div><h2>Missão cumprida!</h2><p class="lead" id="doneText">Você explorou os objetos deste destino. Suas descobertas estão guardadas!</p><div class="guide"><div class="mini">👩🏻‍🚀</div><div class="bubble">Parabéns, explorador! Cada descoberta ajuda a montar nossa história da exploração espacial.</div></div><div class="btn-row"><button class="btn primary" id="otherPlanet">EXPLORAR O OUTRO PLANETA</button><button class="btn secondary" id="finishAdventure">ENCERRAR A AVENTURA</button><button class="btn secondary" id="openDiaryDone">📖 ABRIR DIÁRIO</button></div></div><div class="hero-art"><div class="planet-arrival">🏅</div></div></div>
-  </section>
-
-  <section class="screen" id="final">
-    <div class="hero" style="min-height:70vh"><div><div class="eyebrow">Fim da jornada — começo da curiosidade</div><h2>Você faz parte dessa história!</h2><p class="lead">Você conheceu missões, equipamentos e ideias que levaram a humanidade para além da Terra. Continue fazendo perguntas: toda grande descoberta começa com curiosidade.</p><div class="stats" id="finalStats"></div><div class="btn-row"><button class="btn primary" id="finalDiary">VER MEU DIÁRIO</button><button class="btn secondary" id="restart">RECOMEÇAR A VIAGEM</button></div></div><div class="hero-art"><div class="earth"></div><div class="planet-arrival">👩🏻‍🚀</div></div></div>
-  </section>
-</main>
-
-<div class="modal-backdrop" id="diaryModal" role="dialog" aria-modal="true" aria-labelledby="diaryHeading">
- <div class="modal"><div class="modal-head"><div><div class="eyebrow">Suas descobertas ficam guardadas</div><h2 id="diaryHeading">Diário de Viagem</h2></div><button class="close" id="closeDiary" aria-label="Fechar diário">✕</button></div>
- <p>Este é o registro da sua expedição. Você pode voltar aqui sempre que quiser.</p>
- <div class="stats"><div class="stat"><strong id="discoveredCount">0/4</strong>Objetos descobertos</div><div class="stat"><strong id="completedCount">0</strong>Histórias concluídas</div><div class="stat"><strong id="correctCount">0</strong>Respostas certas</div></div>
- <div class="meter"><span id="diaryMeter"></span></div><p class="small" id="diaryPercent">0% da exploração concluída</p>
- <div class="diary-grid"><div class="diary-section"><h3>🌙 LUA</h3><div id="moonDiary"></div><div id="moonMedal" class="small"></div></div><div class="diary-section"><h3>🔴 MARTE</h3><div id="marsDiary"></div><div id="marsMedal" class="small"></div></div></div>
- <div class="btn-row" style="justify-content:flex-end"><button class="btn primary" id="closeDiaryBottom">FECHAR DIÁRIO</button></div>
- </div>
-</div>
-<div class="toast" id="toast" role="status"></div>
-<script>
-const DATA={
- moon:{name:"Lua",intro:"Nosso satélite natural foi visitado por missões que ajudaram a preparar a exploração humana.",speech:"Olhe ao redor! Aqui estão dois registros importantes da exploração lunar. Vamos descobrir o que cada um nos conta?",objects:[
- {id:"apollo",name:"Apollo 11",icon:"🚀",short:"A missão que levou os primeiros seres humanos à superfície lunar.",chapters:[
- ["Uma missão histórica","A Apollo 11 foi a missão espacial da NASA que levou os primeiros seres humanos à superfície da Lua. Ela foi lançada em 16 de julho de 1969, levando Neil Armstrong, Buzz Aldrin e Michael Collins.","A Apollo 11 entrou para a história porque marcou a primeira caminhada humana na Lua."],
- ["A chegada à Lua","Em 20 de julho de 1969, o módulo lunar Eagle pousou no Mar da Tranquilidade. Neil Armstrong desceu primeiro; Buzz Aldrin caminhou na superfície pouco depois. Michael Collins permaneceu em órbita no módulo de comando.","Enquanto dois astronautas exploravam o solo, Collins cuidava do módulo que os levaria de volta."],
- ["O que ficou por lá?","Os astronautas instalaram instrumentos científicos, coletaram amostras de rochas e deixaram equipamentos na superfície. O estágio de descida do módulo lunar permaneceu na Lua; o estágio de subida foi descartado após o encontro em órbita.","As amostras e os instrumentos ajudaram cientistas a estudar a formação e a história da Lua."],
- ["Por que foi importante?","A missão demonstrou que seres humanos podiam viajar até a Lua, trabalhar em sua superfície e retornar à Terra. Ela também ampliou o conhecimento científico e tecnológico usado em missões posteriores.","Curiosidade: a famosa frase de Armstrong foi transmitida para milhões de pessoas que acompanhavam a missão na Terra."]
- ],quiz:[["Em que ano a Apollo 11 pousou na Lua?",["1961","1969","1975"],1,"A Apollo 11 pousou na Lua em 20 de julho de 1969."],["Quem permaneceu em órbita enquanto Armstrong e Aldrin estavam na superfície?",["Michael Collins","Neil Armstrong","Buzz Aldrin"],0,"Michael Collins permaneceu no módulo de comando em órbita lunar."]]},
- {id:"surveyor",name:"Surveyor 3",icon:"🛰️",short:"Uma sonda robótica que estudou o solo lunar antes das missões Apollo.",chapters:[
- ["Um visitante robótico","O Surveyor 3 foi uma sonda não tripulada dos Estados Unidos. Ele pousou na Lua em 20 de abril de 1967, na região do Oceano das Tempestades.","Antes de enviar astronautas, cientistas precisavam entender melhor como era a superfície lunar."],
- ["Investigar o terreno","A sonda enviou imagens da superfície e usou uma pequena pá mecânica para mover e examinar o solo. Esses testes ajudaram a estudar as propriedades do terreno lunar.","O Surveyor 3 funcionava como um explorador robótico: observava, fotografava e fazia pequenos testes."],
- ["Uma visita inesperada","Em novembro de 1969, os astronautas da Apollo 12 pousaram perto do Surveyor 3. Pete Conrad e Alan Bean visitaram a sonda e trouxeram algumas de suas peças de volta à Terra para análise.","Foi uma oportunidade rara de comparar como um equipamento mudava depois de passar mais de dois anos na Lua."],
- ["Seu legado","As informações do Surveyor 3 contribuíram para o conhecimento sobre pousos na Lua e sobre o ambiente lunar. A sonda permanece na superfície, embora algumas peças tenham sido trazidas à Terra.","Curiosidade: o encontro entre a Apollo 12 e o Surveyor 3 foi uma espécie de visita a um antigo explorador robótico."]
- ],quiz:[["Qual era uma das tarefas do Surveyor 3?",["Levar astronautas à Lua","Fotografar e examinar o solo lunar","Explorar Marte"],1,"O Surveyor 3 fotografou a superfície e fez testes no solo com uma pequena pá."],["Qual missão visitou o Surveyor 3?",["Apollo 12","Apollo 8","Apollo 17"],0,"A tripulação da Apollo 12 pousou perto da sonda em novembro de 1969."]]}
- ]},
- mars:{name:"Marte",intro:"O planeta vermelho é explorado por robôs que observam rochas, clima e possibilidades de futuras missões.",speech:"Chegamos a Marte! Este planeta tem paisagens rochosas e uma atmosfera bem diferente da Terra. Vamos conhecer dois exploradores?",objects:[
- {id:"opportunity",name:"Opportunity",icon:"🤖",short:"Um rover que investigou rochas e sinais de água antiga em Marte.",chapters:[
- ["Um explorador sobre rodas","O Opportunity foi um rover robótico da NASA. Ele chegou a Marte em 25 de janeiro de 2004, na região de Meridiani Planum, para estudar rochas e procurar pistas sobre a presença de água no passado.","Ele foi projetado para uma missão inicial de cerca de 90 dias marcianos, mas trabalhou por muito mais tempo."],
- ["O que investigou?","Com câmeras e instrumentos científicos, o rover analisou rochas e o solo. Encontrou evidências geológicas de que a região já teve água líquida, em condições muito diferentes das atuais.","Essas pistas ajudam os cientistas a reconstruir como era Marte há bilhões de anos."],
- ["Uma missão muito maior","O Opportunity percorreu cerca de 45 quilômetros e trabalhou por quase 15 anos. Em junho de 2018, uma grande tempestade de poeira reduziu a luz solar que alimentava seus painéis.","A equipe tentou restabelecer contato, mas a última comunicação aconteceu em 10 de junho de 2018. A NASA encerrou a missão em fevereiro de 2019."],
- ["Um legado gigante","O Opportunity mostrou que Marte teve ambientes com água no passado e superou muito sua duração planejada. Seus dados continuam ajudando a ciência.","Curiosidade: a missão foi planejada para durar aproximadamente três meses, mas o rover continuou explorando por quase quinze anos."]
- ],quiz:[["Qual era um dos objetivos do Opportunity?",["Procurar pistas de água antiga em Marte","Transportar pessoas","Voar pela atmosfera"],0,"O Opportunity estudou rochas em busca de evidências de água no passado de Marte."],["Por que o Opportunity parou de se comunicar em 2018?",["Perdeu as rodas","Uma tempestade de poeira prejudicou a energia solar","Caiu em um buraco"],1,"A tempestade de poeira reduziu a luz que chegava aos painéis solares do rover."]]},
- {id:"ingenuity",name:"Ingenuity Mars Helicopter",icon:"🚁",short:"O pequeno helicóptero que realizou os primeiros voos motorizados em outro planeta.",chapters:[
- ["Um helicóptero em Marte","O Ingenuity foi um helicóptero experimental da NASA. Ele viajou preso ao rover Perseverance e chegou a Marte em 18 de fevereiro de 2021.","Ele não era um rover: foi criado para testar se um veículo poderia voar na atmosfera fina de Marte."],
- ["Um voo pioneiro","Em 19 de abril de 2021, o Ingenuity realizou seu primeiro voo motorizado e controlado em outro planeta. Subiu alguns metros, pairou por um curto período e pousou.","Como os sinais de rádio levam minutos para viajar entre a Terra e Marte, os voos eram planejados com antecedência e executados de forma autônoma."],
- ["Mais voos do que o esperado","A demonstração deveria realizar apenas alguns voos. No total, o Ingenuity completou 72 voos, ajudando a testar tecnologias e mostrando como aeronaves poderiam apoiar futuras explorações.","Ele também tirou imagens aéreas que ajudaram a equipe a observar o terreno marciano."],
- ["Fim da missão, novas possibilidades","Em janeiro de 2024, a NASA anunciou o fim da missão após danos em uma das pás do rotor. O Ingenuity não podia mais voar, mas sua demonstração tecnológica foi um sucesso.","Curiosidade: ele foi a primeira aeronave a realizar voo motorizado e controlado em outro planeta."]
- ],quiz:[["O que era o Ingenuity?",["Um rover","Um helicóptero experimental","Uma sonda que pousou na Lua"],1,"O Ingenuity era um helicóptero experimental, projetado para voar na atmosfera marciana."],["Quantos voos o Ingenuity completou?",["7","27","72"],2,"O Ingenuity completou 72 voos em Marte, muito além da demonstração inicial planejada."]]}
- ]}
-};
-const $=s=>document.querySelector(s);
-let currentScreen="home",currentPlanet=null,currentObject=null,chapterIndex=0,quizIndex=0,quizAnswered=false,soundOn=true,reduced=false,returnScreen="home";
-const blank=()=>({discovered:{},completed:{},answers:{},correct:0,visited:[]});
-let progress=JSON.parse(localStorage.getItem("arquivoCosmicoProgress")||"null")||blank();
-function save(){localStorage.setItem("arquivoCosmicoProgress",JSON.stringify(progress))}
-function show(id){document.querySelectorAll(".screen").forEach(s=>s.classList.toggle("active",s.id===id));currentScreen=id;window.scrollTo({top:0,behavior:reduced?"auto":"smooth"})}
-function speak(text){if(!soundOn||!("speechSynthesis"in window))return; speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(text);u.lang="pt-BR";u.rate=.94;u.pitch=1.08;speechSynthesis.speak(u)}
-function toast(msg){let t=$("#toast");t.textContent=msg;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2300)}
-function openDiary(){returnScreen=currentScreen;renderDiary();$("#diaryModal").classList.add("open")}
-function closeDiary(){ $("#diaryModal").classList.remove("open");show(returnScreen)}
-function allObjects(){return Object.values(DATA).flatMap(p=>p.objects)}
-function discoveredCount(){return Object.keys(progress.discovered).length}
-function renderDiary(){
- let total=4,done=discoveredCount(),completed=Object.keys(progress.completed).length;
- $("#discoveredCount").textContent=done+"/4";$("#completedCount").textContent=completed;$("#correctCount").textContent=progress.correct;
- $("#diaryMeter").style.width=(done/total*100)+"%";$("#diaryPercent").textContent=Math.round(done/total*100)+"% da exploração concluída";
- for(let key of ["moon","mars"]){let el=key==="moon"?$("#moonDiary"):$("#marsDiary");el.innerHTML="";DATA[key].objects.forEach(o=>{let found=!!progress.discovered[o.id],finished=!!progress.completed[o.id];let div=document.createElement("div");div.className="diary-item "+(!found?"locked":"");div.innerHTML=`<div class="thumb">${found?o.icon:"❔"}</div><div><strong>${found?o.name:"Descoberta ainda bloqueada"}</strong><small>${found?(finished?"História concluída · abrir novamente":"Descoberta iniciada · abrir"):"Explore o planeta para revelar"}</small></div>`;if(found){div.style.cursor="pointer";div.tabIndex=0;div.setAttribute("role","button");div.onclick=()=>{closeDiary();currentPlanet=key;openStory(o)};div.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();div.click()}}}el.appendChild(div)});let medal=DATA[key].objects.every(o=>progress.completed[o.id]);(key==="moon"?$("#moonMedal"):$("#marsMedal")).textContent=medal?"🏅 Medalha conquistada!":"Medalha: conclua as duas histórias deste destino."}
-}
-function startLaunch(){show("launch");speak("Motores ligados! Estamos deixando a Terra para trás.");setTimeout(()=>{if(currentScreen==="launch")show("destinations")},3600)}
-function choosePlanet(key){currentPlanet=key;let p=DATA[key];$("#planetTitle").textContent=p.name;$("#planetEyebrow").textContent="Destino selecionado";$("#planetIntro").textContent=p.intro;$("#planetSpeech").textContent=p.speech;$("#landLabel").textContent=key==="moon"?"SUPERFÍCIE LUNAR":"SUPERFÍCIE DE MARTE";$("#landscape").classList.toggle("mars-bg",key==="mars");$("#sceneIcon").textContent=key==="moon"?"🌑":"🪨";let grid=$("#objectGrid");grid.innerHTML="";p.objects.forEach(o=>{let b=document.createElement("button");b.className="object-card";b.innerHTML=`<div class="object-art">${o.icon}</div><div><strong>${o.name}</strong><p>${o.short}</p><small>${progress.completed[o.id]?"✓ História concluída":progress.discovered[o.id]?"Continuar descoberta":"Investigar objeto →"}</small></div>`;b.onclick=()=>openStory(o);grid.appendChild(b)});progress.visited=Array.from(new Set([...progress.visited,key]));save();show("planet");speak(p.speech)}
-function openStory(o){currentObject=o;chapterIndex=0;progress.discovered[o.id]=true;save();renderChapter();show("story")}
-function renderChapter(){let c=currentObject.chapters[chapterIndex];$("#storyPlanet").textContent=DATA[currentPlanet].name+" • arquivo de descoberta";$("#storyTitle").textContent=currentObject.name;$("#storyIcon").textContent=currentObject.icon;$("#storyCount").textContent=`CENA ${chapterIndex+1} DE ${currentObject.chapters.length}`;$("#chapterTitle").textContent=c[0];$("#chapterText").textContent=c[1];$("#storySpeech").textContent=c[2];$("#storyProgress").style.width=((chapterIndex+1)/currentObject.chapters.length*100)+"%";$("#prevChapter").disabled=chapterIndex===0;$("#prevChapter").style.opacity=chapterIndex===0?".4":"1";$("#nextChapter").textContent=chapterIndex===currentObject.chapters.length-1?"Responder atividade →":"Próxima cena →";speak(c[2])}
-function nextChapter(){if(chapterIndex<currentObject.chapters.length-1){chapterIndex++;renderChapter()}else{quizIndex=0;showQuiz()}}
-function showQuiz(){quizAnswered=false;let q=currentObject.quiz[quizIndex];$("#quizTitle").textContent="O que você descobriu sobre "+currentObject.name+"?";$("#quizCount").textContent=`PERGUNTA ${quizIndex+1} DE ${currentObject.quiz.length}`;$("#question").textContent=q[0];$("#answers").innerHTML="";$("#quizFeedback").innerHTML="";$("#quizNext").disabled=true;q[1].forEach((a,i)=>{let b=document.createElement("button");b.className="answer";b.textContent=String.fromCharCode(65+i)+". "+a;b.onclick=()=>answer(i,b);$("#answers").appendChild(b)});show("quiz")}
-function answer(i,btn){if(quizAnswered)return;quizAnswered=true;let q=currentObject.quiz[quizIndex],correct=i===q[2];document.querySelectorAll(".answer").forEach((b,j)=>{b.disabled=true;if(j===q[2])b.style.borderColor="#8de4c3";if(j===i&&!correct)b.style.borderColor="#ff967e"});if(correct){progress.correct++;$("#quizFeedback").innerHTML=`<div class="feedback">✨ Muito bem, explorador! Você prestou atenção à história!<br><span class="small">${q[3]}</span></div>`;speak("Muito bem, explorador! Você prestou bastante atenção à história!")}else{$("#quizFeedback").innerHTML=`<div class="feedback wrong">Quase lá, explorador! Não tem problema. Você pode rever a história ou continuar sua aventura.<br><span class="small">${q[3]}</span><div class="btn-row"><button class="btn secondary" id="reviewStory">VOLTAR À HISTÓRIA</button><button class="btn coral" id="continueAnyway">CONTINUAR MESMO ASSIM</button></div></div>`;$("#reviewStory").onclick=()=>{chapterIndex=0;renderChapter();show("story")};$("#continueAnyway").onclick=()=>advanceQuiz()}progress.answers[currentObject.id]=progress.answers[currentObject.id]||[];progress.answers[currentObject.id][quizIndex]={selected:i,correct};save();$("#quizNext").disabled=false}
-function advanceQuiz(){if(quizIndex<currentObject.quiz.length-1){quizIndex++;showQuiz()}else{progress.completed[currentObject.id]=true;save();toast("Descoberta registrada no Diário!");let allDone=DATA[currentPlanet].objects.every(o=>progress.completed[o.id]);if(allDone){$("#doneText").textContent=`Você concluiu as histórias da ${DATA[currentPlanet].name}! Suas descobertas foram guardadas no Diário de Viagem.`;show("planetDone");speak("Parabéns! Você explorou todos os objetos deste destino! Suas descobertas já estão guardadas no Diário de Viagem!")}else{choosePlanet(currentPlanet)}}}
-$("#startBtn").onclick=startLaunch;$("#repeatHome").onclick=()=>speak($("#homeSpeech").textContent);
-document.querySelectorAll("[data-planet]").forEach(b=>b.onclick=()=>choosePlanet(b.dataset.planet));
-$("#backDest").onclick=()=>show("destinations");$("#closeStory").onclick=()=>choosePlanet(currentPlanet);$("#prevChapter").onclick=()=>{if(chapterIndex>0){chapterIndex--;renderChapter()}};$("#nextChapter").onclick=nextChapter;$("#quizNext").onclick=advanceQuiz;
-$("#diaryTop").onclick=openDiary;$("#closeDiary").onclick=closeDiary;$("#closeDiaryBottom").onclick=closeDiary;$("#openDiaryDone").onclick=openDiary;$("#otherPlanet").onclick=()=>{let other=currentPlanet==="moon"?"mars":"moon";show("destinations");choosePlanet(other)};$("#finishAdventure").onclick=()=>{let done=discoveredCount();$("#finalStats").innerHTML=`<div class="stat"><strong>${done}/4</strong>Objetos descobertos</div><div class="stat"><strong>${progress.correct}</strong>Respostas certas</div><div class="stat"><strong>${Object.keys(progress.completed).length}</strong>Histórias concluídas</div>`;show("final");speak("Parabéns, explorador! Você conheceu histórias incríveis e agora também faz parte dessa aventura espacial!")};$("#finalDiary").onclick=openDiary;$("#restart").onclick=()=>show("destinations");
-$("#soundToggle").onclick=()=>{soundOn=!soundOn;$("#soundToggle").textContent=soundOn?"🔊 Som":"🔇 Som";if(!soundOn&&"speechSynthesis"in window)speechSynthesis.cancel();else speak("Som ativado.")};
-$("#motionToggle").onclick=()=>{reduced=!reduced;document.body.classList.toggle("reduced",reduced);$("#motionToggle").textContent=reduced?"◌ Movimento reduzido":"◌ Movimento";document.querySelectorAll("*").forEach(el=>el.style.scrollBehavior=reduced?"auto":"")};
-$("#diaryModal").addEventListener("click",e=>{if(e.target.id==="diaryModal")closeDiary()});
-document.addEventListener("keydown",e=>{if(e.key==="Escape"&&$("#diaryModal").classList.contains("open"))closeDiary()});
-</script>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script>
+    const DATA = {
+      moon: {
+        name: "Lua", intro: "Nosso satélite natural foi visitado por missões que ajudaram a preparar a exploração humana.", speech: "Olhe ao redor! Aqui estão dois registros importantes da exploração lunar. Vamos descobrir o que cada um nos conta?", objects: [
+          {
+            id: "apollo", name: "Apollo 11", icon: "🚀", short: "A missão que levou os primeiros seres humanos à superfície lunar.", chapters: [
+              ["Uma missão histórica", "A Apollo 11 foi a missão espacial da NASA que levou os primeiros seres humanos à superfície da Lua. Ela foi lançada em 16 de julho de 1969, levando Neil Armstrong, Buzz Aldrin e Michael Collins.", "A Apollo 11 entrou para a história porque marcou a primeira caminhada humana na Lua."],
+              ["A chegada à Lua", "Em 20 de julho de 1969, o módulo lunar Eagle pousou no Mar da Tranquilidade. Neil Armstrong desceu primeiro; Buzz Aldrin caminhou na superfície pouco depois. Michael Collins permaneceu em órbita no módulo de comando.", "Enquanto dois astronautas exploravam o solo, Collins cuidava do módulo que os levaria de volta."],
+              ["O que ficou por lá?", "Os astronautas instalaram instrumentos científicos, coletaram amostras de rochas e deixaram equipamentos na superfície. O estágio de descida do módulo lunar permaneceu na Lua; o estágio de subida foi descartado após o encontro em órbita.", "As amostras e os instrumentos ajudaram cientistas a estudar a formação e a história da Lua."],
+              ["Por que foi importante?", "A missão demonstrou que seres humanos podiam viajar até a Lua, trabalhar em sua superfície e retornar à Terra. Ela também ampliou o conhecimento científico e tecnológico usado em missões posteriores.", "Curiosidade: a famosa frase de Armstrong foi transmitida para milhões de pessoas que acompanhavam a missão na Terra."]
+            ], quiz: [["Em que ano a Apollo 11 pousou na Lua?", ["1961", "1969", "1975"], 1, "A Apollo 11 pousou na Lua em 20 de julho de 1969."], ["Quem permaneceu em órbita enquanto Armstrong e Aldrin estavam na superfície?", ["Michael Collins", "Neil Armstrong", "Buzz Aldrin"], 0, "Michael Collins permaneceu no módulo de comando em órbita lunar."]]
+          },
+          {
+            id: "surveyor", name: "Surveyor 3", icon: "🛰️", short: "Uma sonda robótica que estudou o solo lunar antes das missões Apollo.", chapters: [
+              ["Um visitante robótico", "O Surveyor 3 foi uma sonda não tripulada dos Estados Unidos. Ele pousou na Lua em 20 de abril de 1967, na região do Oceano das Tempestades.", "Antes de enviar astronautas, cientistas precisavam entender melhor como era a superfície lunar."],
+              ["Investigar o terreno", "A sonda enviou imagens da superfície e usou uma pequena pá mecânica para mover e examinar o solo. Esses testes ajudaram a estudar as propriedades do terreno lunar.", "O Surveyor 3 funcionava como um explorador robótico: observava, fotografava e fazia pequenos testes."],
+              ["Uma visita inesperada", "Em novembro de 1969, os astronautas da Apollo 12 pousaram perto do Surveyor 3. Pete Conrad e Alan Bean visitaram a sonda e trouxeram algumas de suas peças de volta à Terra para análise.", "Foi uma oportunidade rara de comparar como um equipamento mudava depois de passar mais de dois anos na Lua."],
+              ["Seu legado", "As informações do Surveyor 3 contribuíram para o conhecimento sobre pousos na Lua e sobre o ambiente lunar. A sonda permanece na superfície, embora algumas peças tenham sido trazidas à Terra.", "Curiosidade: o encontro entre a Apollo 12 e o Surveyor 3 foi uma espécie de visita a um antigo explorador robótico."]
+            ], quiz: [["Qual era uma das tarefas do Surveyor 3?", ["Levar astronautas à Lua", "Fotografar e examinar o solo lunar", "Explorar Marte"], 1, "O Surveyor 3 fotografou a superfície e fez testes no solo com uma pequena pá."], ["Qual missão visitou o Surveyor 3?", ["Apollo 12", "Apollo 8", "Apollo 17"], 0, "A tripulação da Apollo 12 pousou perto da sonda em novembro de 1969."]]
+          }
+        ]
+      },
+      mars: {
+        name: "Marte", intro: "O planeta vermelho é explorado por robôs que observam rochas, clima e possibilidades de futuras missões.", speech: "Chegamos a Marte! Este planeta tem paisagens rochosas e uma atmosfera bem diferente da Terra. Vamos conhecer dois exploradores?", objects: [
+          {
+            id: "opportunity", name: "Opportunity", icon: "🤖", short: "Um rover que investigou rochas e sinais de água antiga em Marte.", chapters: [
+              ["Um explorador sobre rodas", "O Opportunity foi um rover robótico da NASA. Ele chegou a Marte em 25 de janeiro de 2004, na região de Meridiani Planum, para estudar rochas e procurar pistas sobre a presença de água no passado.", "Ele foi projetado para uma missão inicial de cerca de 90 dias marcianos, mas trabalhou por muito mais tempo."],
+              ["O que investigou?", "Com câmeras e instrumentos científicos, o rover analisou rochas e o solo. Encontrou evidências geológicas de que a região já teve água líquida, em condições muito diferentes das atuais.", "Essas pistas ajudam os cientistas a reconstruir como era Marte há bilhões de anos."],
+              ["Uma missão muito maior", "O Opportunity percorreu cerca de 45 quilômetros e trabalhou por quase 15 anos. Em junho de 2018, uma grande tempestade de poeira reduziu a luz solar que alimentava seus painéis.", "A equipe tentou restabelecer contato, mas a última comunicação aconteceu em 10 de junho de 2018. A NASA encerrou a missão em fevereiro de 2019."],
+              ["Um legado gigante", "O Opportunity mostrou que Marte teve ambientes com água no passado e superou muito sua duração planejada. Seus dados continuam ajudando a ciência.", "Curiosidade: a missão foi planejada para durar aproximadamente três meses, mas o rover continuou explorando por quase quinze anos."]
+            ], quiz: [["Qual era um dos objetivos do Opportunity?", ["Procurar pistas de água antiga em Marte", "Transportar pessoas", "Voar pela atmosfera"], 0, "O Opportunity estudou rochas em busca de evidências de água no passado de Marte."], ["Por que o Opportunity parou de se comunicar em 2018?", ["Perdeu as rodas", "Uma tempestade de poeira prejudicou a energia solar", "Caiu em um buraco"], 1, "A tempestade de poeira reduziu a luz que chegava aos painéis solares do rover."]]
+          },
+          {
+            id: "ingenuity", name: "Ingenuity Mars Helicopter", icon: "🚁", short: "O pequeno helicóptero que realizou os primeiros voos motorizados em outro planeta.", chapters: [
+              ["Um helicóptero em Marte", "O Ingenuity foi um helicóptero experimental da NASA. Ele viajou preso ao rover Perseverance e chegou a Marte em 18 de fevereiro de 2021.", "Ele não era um rover: foi criado para testar se um veículo poderia voar na atmosfera fina de Marte."],
+              ["Um voo pioneiro", "Em 19 de abril de 2021, o Ingenuity realizou seu primeiro voo motorizado e controlado em outro planeta. Subiu alguns metros, pairou por um curto período e pousou.", "Como os sinais de rádio levam minutos para viajar entre a Terra e Marte, os voos eram planejados com antecedência e executados de forma autônoma."],
+              ["Mais voos do que o esperado", "A demonstração deveria realizar apenas alguns voos. No total, o Ingenuity completou 72 voos, ajudando a testar tecnologias e mostrando como aeronaves poderiam apoiar futuras explorações.", "Ele também tirou imagens aéreas que ajudaram a equipe a observar o terreno marciano."],
+              ["Fim da missão, novas possibilidades", "Em janeiro de 2024, a NASA anunciou o fim da missão após danos em uma das pás do rotor. O Ingenuity não podia mais voar, mas sua demonstração tecnológica foi um sucesso.", "Curiosidade: ele foi a primeira aeronave a realizar voo motorizado e controlado em outro planeta."]
+            ], quiz: [["O que era o Ingenuity?", ["Um rover", "Um helicóptero experimental", "Uma sonda que pousou na Lua"], 1, "O Ingenuity era um helicóptero experimental, projetado para voar na atmosfera marciana."], ["Quantos voos o Ingenuity completou?", ["7", "27", "72"], 2, "O Ingenuity completou 72 voos em Marte, muito além da demonstração inicial planejada."]]
+          }
+        ]
+      }
+    };
+    const $ = s => document.querySelector(s);
+    let currentScreen = "home", currentPlanet = null, currentObject = null, chapterIndex = 0, quizIndex = 0, quizAnswered = false, soundOn = true, reduced = false, returnScreen = "home";
+    const blank = () => ({ discovered: {}, completed: {}, answers: {}, correct: 0, visited: [] });
+    let progress = JSON.parse(localStorage.getItem("arquivoCosmicoProgress") || "null") || blank();
+    function save() { localStorage.setItem("arquivoCosmicoProgress", JSON.stringify(progress)) }
+    function show(id) { document.querySelectorAll(".screen").forEach(s => s.classList.toggle("active", s.id === id)); currentScreen = id; window.scrollTo({ top: 0, behavior: reduced ? "auto" : "smooth" }) }
+    function speak(text) { if (!soundOn || !("speechSynthesis" in window)) return; speechSynthesis.cancel(); let u = new SpeechSynthesisUtterance(text); u.lang = "pt-BR"; u.rate = .94; u.pitch = 1.08; speechSynthesis.speak(u) }
+    function toast(msg) { let t = $("#toast"); t.textContent = msg; t.classList.add("show"); setTimeout(() => t.classList.remove("show"), 2300) }
+    function openDiary() { returnScreen = currentScreen; renderDiary(); $("#diaryModal").classList.add("open") }
+    function closeDiary() { $("#diaryModal").classList.remove("open"); show(returnScreen) }
+    function allObjects() { return Object.values(DATA).flatMap(p => p.objects) }
+    function discoveredCount() { return Object.keys(progress.discovered).length }
+    function renderDiary() {
+      let total = 4, done = discoveredCount(), completed = Object.keys(progress.completed).length;
+      $("#discoveredCount").textContent = done + "/4"; $("#completedCount").textContent = completed; $("#correctCount").textContent = progress.correct;
+      $("#diaryMeter").style.width = (done / total * 100) + "%"; $("#diaryPercent").textContent = Math.round(done / total * 100) + "% da exploração concluída";
+      for (let key of ["moon", "mars"]) { let el = key === "moon" ? $("#moonDiary") : $("#marsDiary"); el.innerHTML = ""; DATA[key].objects.forEach(o => { let found = !!progress.discovered[o.id], finished = !!progress.completed[o.id]; let div = document.createElement("div"); div.className = "diary-item " + (!found ? "locked" : ""); div.innerHTML = `<div class="thumb">${found ? o.icon : "❔"}</div><div><strong>${found ? o.name : "Descoberta ainda bloqueada"}</strong><small>${found ? (finished ? "História concluída · abrir novamente" : "Descoberta iniciada · abrir") : "Explore o planeta para revelar"}</small></div>`; if (found) { div.style.cursor = "pointer"; div.tabIndex = 0; div.setAttribute("role", "button"); div.onclick = () => { closeDiary(); currentPlanet = key; openStory(o) }; div.onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); div.click() } } } el.appendChild(div) }); let medal = DATA[key].objects.every(o => progress.completed[o.id]); (key === "moon" ? $("#moonMedal") : $("#marsMedal")).textContent = medal ? "🏅 Medalha conquistada!" : "Medalha: conclua as duas histórias deste destino." }
+    }
+    function startLaunch() { show("launch"); speak("Motores ligados! Estamos deixando a Terra para trás."); setTimeout(() => { if (currentScreen === "launch") show("destinations") }, 3600) }
+    function choosePlanet(key) { currentPlanet = key; let p = DATA[key]; $("#planetTitle").textContent = p.name; $("#planetEyebrow").textContent = "Destino selecionado"; $("#planetIntro").textContent = p.intro; $("#planetSpeech").textContent = p.speech; $("#landLabel").textContent = key === "moon" ? "SUPERFÍCIE LUNAR" : "SUPERFÍCIE DE MARTE"; $("#landscape").classList.toggle("mars-bg", key === "mars"); $("#sceneIcon").textContent = key === "moon" ? "🌑" : "🪨"; let grid = $("#objectGrid"); grid.innerHTML = ""; p.objects.forEach(o => { let b = document.createElement("button"); b.className = "object-card"; b.innerHTML = `<div class="object-art">${o.icon}</div><div><strong>${o.name}</strong><p>${o.short}</p><small>${progress.completed[o.id] ? "✓ História concluída" : progress.discovered[o.id] ? "Continuar descoberta" : "Investigar objeto →"}</small></div>`; b.onclick = () => openStory(o); grid.appendChild(b) }); progress.visited = Array.from(new Set([...progress.visited, key])); save(); show("planet"); speak(p.speech) }
+    function openStory(o) { currentObject = o; chapterIndex = 0; progress.discovered[o.id] = true; save(); renderChapter(); show("story") }
+    function renderChapter() { let c = currentObject.chapters[chapterIndex]; $("#storyPlanet").textContent = DATA[currentPlanet].name + " • arquivo de descoberta"; $("#storyTitle").textContent = currentObject.name; $("#storyIcon").textContent = currentObject.icon; $("#storyCount").textContent = `CENA ${chapterIndex + 1} DE ${currentObject.chapters.length}`; $("#chapterTitle").textContent = c[0]; $("#chapterText").textContent = c[1]; $("#storySpeech").textContent = c[2]; $("#storyProgress").style.width = ((chapterIndex + 1) / currentObject.chapters.length * 100) + "%"; $("#prevChapter").disabled = chapterIndex === 0; $("#prevChapter").style.opacity = chapterIndex === 0 ? ".4" : "1"; $("#nextChapter").textContent = chapterIndex === currentObject.chapters.length - 1 ? "Responder atividade →" : "Próxima cena →"; speak(c[2]) }
+    function nextChapter() { if (chapterIndex < currentObject.chapters.length - 1) { chapterIndex++; renderChapter() } else { quizIndex = 0; showQuiz() } }
+    function showQuiz() { quizAnswered = false; let q = currentObject.quiz[quizIndex]; $("#quizTitle").textContent = "O que você descobriu sobre " + currentObject.name + "?"; $("#quizCount").textContent = `PERGUNTA ${quizIndex + 1} DE ${currentObject.quiz.length}`; $("#question").textContent = q[0]; $("#answers").innerHTML = ""; $("#quizFeedback").innerHTML = ""; $("#quizNext").disabled = true; q[1].forEach((a, i) => { let b = document.createElement("button"); b.className = "answer"; b.textContent = String.fromCharCode(65 + i) + ". " + a; b.onclick = () => answer(i, b); $("#answers").appendChild(b) }); show("quiz") }
+    function answer(i, btn) { if (quizAnswered) return; quizAnswered = true; let q = currentObject.quiz[quizIndex], correct = i === q[2]; document.querySelectorAll(".answer").forEach((b, j) => { b.disabled = true; if (j === q[2]) b.style.borderColor = "#8de4c3"; if (j === i && !correct) b.style.borderColor = "#ff967e" }); if (correct) { progress.correct++; $("#quizFeedback").innerHTML = `<div class="feedback">✨ Muito bem, explorador! Você prestou atenção à história!<br><span class="small">${q[3]}</span></div>`; speak("Muito bem, explorador! Você prestou bastante atenção à história!") } else { $("#quizFeedback").innerHTML = `<div class="feedback wrong">Quase lá, explorador! Não tem problema. Você pode rever a história ou continuar sua aventura.<br><span class="small">${q[3]}</span><div class="btn-row"><button class="btn secondary" id="reviewStory">VOLTAR À HISTÓRIA</button><button class="btn coral" id="continueAnyway">CONTINUAR MESMO ASSIM</button></div></div>`; $("#reviewStory").onclick = () => { chapterIndex = 0; renderChapter(); show("story") }; $("#continueAnyway").onclick = () => advanceQuiz() } progress.answers[currentObject.id] = progress.answers[currentObject.id] || []; progress.answers[currentObject.id][quizIndex] = { selected: i, correct }; save(); $("#quizNext").disabled = false }
+    function advanceQuiz() { if (quizIndex < currentObject.quiz.length - 1) { quizIndex++; showQuiz() } else { progress.completed[currentObject.id] = true; save(); toast("Descoberta registrada no Diário!"); let allDone = DATA[currentPlanet].objects.every(o => progress.completed[o.id]); if (allDone) { $("#doneText").textContent = `Você concluiu as histórias da ${DATA[currentPlanet].name}! Suas descobertas foram guardadas no Diário de Viagem.`; show("planetDone"); speak("Parabéns! Você explorou todos os objetos deste destino! Suas descobertas já estão guardadas no Diário de Viagem!") } else { choosePlanet(currentPlanet) } } }
+    $("#startBtn").onclick = startLaunch; $("#repeatHome").onclick = () => speak($("#homeSpeech").textContent);
+    document.querySelectorAll("[data-planet]").forEach(b => b.onclick = () => choosePlanet(b.dataset.planet));
+    $("#backDest").onclick = () => show("destinations"); $("#closeStory").onclick = () => choosePlanet(currentPlanet); $("#prevChapter").onclick = () => { if (chapterIndex > 0) { chapterIndex--; renderChapter() } }; $("#nextChapter").onclick = nextChapter; $("#quizNext").onclick = advanceQuiz;
+    $("#diaryTop").onclick = openDiary; $("#closeDiary").onclick = closeDiary; $("#closeDiaryBottom").onclick = closeDiary; $("#openDiaryDone").onclick = openDiary; $("#otherPlanet").onclick = () => { let other = currentPlanet === "moon" ? "mars" : "moon"; show("destinations"); choosePlanet(other) }; $("#finishAdventure").onclick = () => { let done = discoveredCount(); $("#finalStats").innerHTML = `<div class="stat"><strong>${done}/4</strong>Objetos descobertos</div><div class="stat"><strong>${progress.correct}</strong>Respostas certas</div><div class="stat"><strong>${Object.keys(progress.completed).length}</strong>Histórias concluídas</div>`; show("final"); speak("Parabéns, explorador! Você conheceu histórias incríveis e agora também faz parte dessa aventura espacial!") }; $("#finalDiary").onclick = openDiary; $("#restart").onclick = () => show("destinations");
+    $("#soundToggle").onclick = () => { soundOn = !soundOn; $("#soundToggle").textContent = soundOn ? "🔊 Som" : "🔇 Som"; if (!soundOn && "speechSynthesis" in window) speechSynthesis.cancel(); else speak("Som ativado.") };
+    $("#motionToggle").onclick = () => { reduced = !reduced; document.body.classList.toggle("reduced", reduced); $("#motionToggle").textContent = reduced ? "◌ Movimento reduzido" : "◌ Movimento"; document.querySelectorAll("*").forEach(el => el.style.scrollBehavior = reduced ? "auto" : "") };
+    $("#diaryModal").addEventListener("click", e => { if (e.target.id === "diaryModal") closeDiary() });
+    document.addEventListener("keydown", e => { if (e.key === "Escape" && $("#diaryModal").classList.contains("open")) closeDiary() });
+  </script>
 </body>
+
 </html>
